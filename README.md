@@ -3,6 +3,8 @@ https://github.com/refractproject/minim-api-description/issues/25 and
 https://github.com/refractproject/minim-api-description/issues/18 for further
 discussion.
 
+Drafter issue at https://github.com/apiaryio/drafter/issues/466.
+
 Uploading as a separate repo because GitHub issues are not good about
 attaching files.
 
