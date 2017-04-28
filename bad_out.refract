@@ -1,0 +1,323 @@
+{
+  "element": "parseResult",
+  "content": [
+    {
+      "element": "category",
+      "meta": {
+        "classes": [
+          "api"
+        ],
+        "title": "Bad Output Test"
+      },
+      "attributes": {
+        "meta": [
+          {
+            "element": "member",
+            "meta": {
+              "classes": [
+                "user"
+              ]
+            },
+            "content": {
+              "key": {
+                "element": "string",
+                "content": "FORMAT"
+              },
+              "value": {
+                "element": "string",
+                "content": "1A9"
+              }
+            }
+          },
+          {
+            "element": "member",
+            "meta": {
+              "classes": [
+                "user"
+              ]
+            },
+            "content": {
+              "key": {
+                "element": "string",
+                "content": "HOST"
+              },
+              "value": {
+                "element": "string",
+                "content": "demo"
+              }
+            }
+          }
+        ]
+      },
+      "content": [
+        {
+          "element": "category",
+          "meta": {
+            "classes": [
+              "resourceGroup"
+            ],
+            "title": ""
+          },
+          "content": [
+            {
+              "element": "resource",
+              "meta": {
+                "title": "First"
+              },
+              "attributes": {
+                "href": "/b1"
+              },
+              "content": [
+                {
+                  "element": "transition",
+                  "meta": {
+                    "title": "First"
+                  },
+                  "attributes": {
+                    "href": "/b1"
+                  },
+                  "content": [
+                    {
+                      "element": "copy",
+                      "content": "This will not expand the reference as discussed in the upstream API Elements\nspecification."
+                    },
+                    {
+                      "element": "httpTransaction",
+                      "content": [
+                        {
+                          "element": "httpRequest",
+                          "attributes": {
+                            "method": "GET"
+                          },
+                          "content": []
+                        },
+                        {
+                          "element": "httpResponse",
+                          "attributes": {
+                            "statusCode": "200"
+                          },
+                          "content": [
+                            {
+                              "element": "dataStructure",
+                              "content": [
+                                {
+                                  "element": "object",
+                                  "content": [
+                                    {
+                                      "element": "member",
+                                      "attributes": {
+                                        "typeAttributes": [
+                                          "required"
+                                        ]
+                                      },
+                                      "content": {
+                                        "key": {
+                                          "element": "string",
+                                          "content": "no_expando"
+                                        },
+                                        "value": {
+                                          "element": "BrokenType"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "resource",
+              "meta": {
+                "title": "Second"
+              },
+              "attributes": {
+                "href": "/b2"
+              },
+              "content": [
+                {
+                  "element": "transition",
+                  "meta": {
+                    "title": "Second"
+                  },
+                  "attributes": {
+                    "href": "/b2"
+                  },
+                  "content": [
+                    {
+                      "element": "copy",
+                      "content": "Creates a dataStructure with an embedded array element and an unexpanded\nreference. Attempts to render the ArrayElement held in dataStructure.content\nreturn back `[undefined]`, because the non-expanded reference does not\nresolve properly."
+                    },
+                    {
+                      "element": "httpTransaction",
+                      "content": [
+                        {
+                          "element": "httpRequest",
+                          "attributes": {
+                            "method": "GET"
+                          },
+                          "content": []
+                        },
+                        {
+                          "element": "httpResponse",
+                          "attributes": {
+                            "statusCode": "200"
+                          },
+                          "content": [
+                            {
+                              "element": "dataStructure",
+                              "content": [
+                                {
+                                  "element": "array",
+                                  "content": [
+                                    {
+                                      "element": "BrokenType"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "resource",
+              "meta": {
+                "title": "WorkingPost"
+              },
+              "attributes": {
+                "href": "/b3"
+              },
+              "content": [
+                {
+                  "element": "transition",
+                  "meta": {
+                    "title": "WorkingPost"
+                  },
+                  "attributes": {
+                    "href": "/b3"
+                  },
+                  "content": [
+                    {
+                      "element": "copy",
+                      "content": "Creates a dataStructure with an embedded object element."
+                    },
+                    {
+                      "element": "httpTransaction",
+                      "content": [
+                        {
+                          "element": "httpRequest",
+                          "meta": {
+                            "title": "JSON Message"
+                          },
+                          "attributes": {
+                            "method": "POST"
+                          },
+                          "content": [
+                            {
+                              "element": "dataStructure",
+                              "content": [
+                                {
+                                  "element": "object",
+                                  "content": [
+                                    {
+                                      "element": "member",
+                                      "content": {
+                                        "key": {
+                                          "element": "string",
+                                          "content": "SampleC"
+                                        },
+                                        "value": {
+                                          "element": "string"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "element": "httpResponse",
+                          "attributes": {
+                            "statusCode": "200"
+                          },
+                          "content": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "category",
+          "meta": {
+            "classes": [
+              "dataStructures"
+            ]
+          },
+          "content": [
+            {
+              "element": "dataStructure",
+              "content": [
+                {
+                  "element": "object",
+                  "meta": {
+                    "id": "BrokenType"
+                  },
+                  "content": [
+                    {
+                      "element": "member",
+                      "attributes": {
+                        "typeAttributes": [
+                          "required"
+                        ]
+                      },
+                      "content": {
+                        "key": {
+                          "element": "string",
+                          "content": "a"
+                        },
+                        "value": {
+                          "element": "string"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "dataStructure",
+              "content": [
+                {
+                  "element": "object",
+                  "meta": {
+                    "id": "BrokenTypeIndent",
+                    "description": "+ b (string, required) - This is registered as part of the description\n    because it has 4 spaces instead of 2; I don't think that's expected\n    behavior from Markdown?"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

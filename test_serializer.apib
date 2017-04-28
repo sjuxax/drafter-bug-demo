@@ -1,0 +1,40 @@
+FORMAT: 1A9
+HOST: demo
+
+# Bad Output Test
+
+## First [GET /b1]
+This will not expand the reference as discussed in the upstream API Elements
+specification.
+
++ Response 200
+    + Attributes
+       + no_expando (BrokenType, required)
+
+## Second [GET /b2]
+Creates a dataStructure with an embedded array element and an unexpanded
+reference. Attempts to render the ArrayElement held in dataStructure.content
+return back `[undefined]`, because the non-expanded reference does not
+resolve properly.
+
++ Response 200
+    + Attributes (array[BrokenType])
+
+## WorkingPost [POST /b3]
+Creates a dataStructure with an embedded object element.
+
++ Request JSON Message
+    + Attributes
+        + SampleC (string)
+
++ Response 200
+
+#Data Structures
+
+##BrokenType (object)
+  + a (string, required)
+
+##BrokenTypeIndent (object)
+    + b (string, required) - This is registered as part of the description
+    because it has 4 spaces instead of 2; I don't think that's expected
+    behavior from Markdown?
