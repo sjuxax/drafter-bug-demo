@@ -1,0 +1,17 @@
+# Output generated with https://github.com/refractproject/minim-api-description/commit/c9cd08389edb14516c0517286afe33a989a289ae
+
+/home/drafter-serializer-bug-demo/node_modules/minim-api-description/lib/elements/data-structure.js:57
+        return this.content && this.content.toValue();
+                                            ^
+
+TypeError: this.content.toValue is not a function
+    at DataStructure.toValue (/home/drafter-serializer-bug-demo/node_modules/minim-api-description/lib/elements/data-structure.js:57:45)
+    at /home/drafter-serializer-bug-demo/node_modules/minim/lib/primitives/array-element.js:21:19
+    at Array.map (native)
+    at HttpResponse.toValue (/home/drafter-serializer-bug-demo/node_modules/minim/lib/primitives/array-element.js:20:27)
+    at /home/drafter-serializer-bug-demo/node_modules/minim/lib/primitives/array-element.js:21:19
+    at Array.map (native)
+    at HttpTransaction.toValue (/home/drafter-serializer-bug-demo/node_modules/minim/lib/primitives/array-element.js:20:27)
+    at /home/drafter-serializer-bug-demo/node_modules/minim/lib/primitives/array-element.js:21:19
+    at Array.map (native)
+    at Transition.toValue (/home/drafter-serializer-bug-demo/node_modules/minim/lib/primitives/array-element.js:20:27)

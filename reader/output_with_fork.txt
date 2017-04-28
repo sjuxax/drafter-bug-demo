@@ -1,0 +1,77 @@
+# Output generated with https://github.com/sjuxax/minim-api-description/commit/81f38e70006388e0e80efb931f96a2aad3646bef
+
+Array [
+  Array [
+    Array [
+      Array [
+        "This will not expand the reference as discussed in the upstream API Elements
+specification.",
+        Array [
+          Array [],
+          Array [
+            Array [
+              Object {
+                "id": "?",
+                "structure": Object {
+                  "no_expando": undefined,
+                },
+              },
+            ],
+          ],
+        ],
+      ],
+    ],
+    Array [
+      Array [
+        "Creates a dataStructure with an embedded array element and an unexpanded
+reference. Attempts to render the ArrayElement held in dataStructure.content
+return back `[undefined]`, because the non-expanded reference does not
+resolve properly.",
+        Array [
+          Array [],
+          Array [
+            Array [
+              Array [
+                "<?BrokenType>",
+              ],
+            ],
+          ],
+        ],
+      ],
+    ],
+    Array [
+      Array [
+        "Creates a dataStructure with an embedded object element.",
+        Array [
+          Array [
+            Array [
+              Object {
+                "id": "?",
+                "structure": Object {
+                  "SampleC": undefined,
+                },
+              },
+            ],
+          ],
+          Array [],
+        ],
+      ],
+    ],
+  ],
+  Array [
+    Array [
+      Object {
+        "id": "BrokenType",
+        "structure": Object {
+          "a": undefined,
+        },
+      },
+    ],
+    Array [
+      Object {
+        "id": "BrokenTypeIndent",
+        "structure": Object {},
+      },
+    ],
+  ],
+]

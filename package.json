@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "minim": "^0.15.0",
+    "minim-api-description": "^0.3.0",
+    "minim-parse-result": "^0.4.0",
+    "pretty-format": "^19.0.0"
+  }
+}
